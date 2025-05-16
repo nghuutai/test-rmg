@@ -1,0 +1,25 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+
+  // https://github.com/prisma/prisma-client-js/issues/616#issuecomment-616107821
+  binaryTargets = ["native", "darwin", "debian-openssl-1.1.x"]
+}
+
+model RMGData {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  nric     String?   @db.VarChar(255)
+  visitNumber     String?   @db.VarChar(255)
+  type   String @db.VarChar(255)
+  data Json
+  isDeleted Boolean @default(false)
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}

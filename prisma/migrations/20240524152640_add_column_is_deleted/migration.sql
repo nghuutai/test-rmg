@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `RMGData` ADD COLUMN `isDeleted` BOOLEAN NOT NULL DEFAULT false;

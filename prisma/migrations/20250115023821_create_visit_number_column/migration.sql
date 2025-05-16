@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE `RMGData` ADD COLUMN `visitNumber` VARCHAR(255) NULL,
+    MODIFY `nric` VARCHAR(255) NULL;

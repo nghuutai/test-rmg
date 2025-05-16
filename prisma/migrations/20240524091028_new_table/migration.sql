@@ -1,0 +1,11 @@
+-- CreateTable
+CREATE TABLE `RMGData` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    `updatedAt` DATETIME(3) NOT NULL,
+    `nric` VARCHAR(255) NOT NULL,
+    `type` VARCHAR(255) NOT NULL,
+    `data` JSON NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
